@@ -83,14 +83,3 @@ class FireBase extends Factory
         return true;
     }
 }
-
-/**
- * Поехали дальше.
- * Google Firebase
- * Класс Firebase
- * Методы
- * SetConnect(array $param) - $param параметры подключения
- * GetStorageFiles( String $path) - получить список файлов и папок $path путь до папки в Storage
- * UploadStorageFile( String $path) - загрузить файл
- * DonwloadStorageFile( String $path , $path_to) - скачать файл в path_to
- */
