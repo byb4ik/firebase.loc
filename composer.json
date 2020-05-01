@@ -1,0 +1,12 @@
+{
+  "name": "den/firebase.loc",
+  "minimum-stability": "dev",
+  "require": {
+    "kreait/firebase-php": "5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}
