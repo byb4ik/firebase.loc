@@ -45,9 +45,10 @@ class FireBase extends Factory
             throw new Exception('Path not set!');
         }
         $this->bucket = $this->storage->bucket($path);
+
         foreach ($this->bucket->objects() as $object) {
-            var_dump($object->info());
-            $this->filelist[] = [$object->info()['metadata']['firebaseStorageDownloadTokens'] => $object->info()['name']];
+            //var_dump($object->downloadToFile(__DIR__ . '/my-file.txt'));
+            $this->filelist[] = $object->info()['name'];
         }
 
         return $this->filelist;
@@ -77,8 +78,7 @@ class FireBase extends Factory
         if (empty($path_to) && !isset($path_to)) {
             throw new Exception('Path not set');
         }
-
-
+        $this->bucket->object($path)->downloadToFile($path_to . $path);
 
         return true;
     }
