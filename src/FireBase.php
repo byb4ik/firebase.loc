@@ -54,7 +54,7 @@ class FireBase extends Factory
         return $this->filelist;
     }
 
-    /**
+    /**В метод передаем имя файла, загружаем в облака
      * @param string $path
      * @return bool
      * @throws Exception
@@ -70,6 +70,12 @@ class FireBase extends Factory
         return true;
     }
 
+    /**Перадаем имя файла и путь, скачиваем файл
+     * @param string $path
+     * @param $path_to
+     * @return bool
+     * @throws Exception
+     */
     public function DonwloadStorageFile(string $path, $path_to)
     {
         if (empty($path) && !isset($path)) {
